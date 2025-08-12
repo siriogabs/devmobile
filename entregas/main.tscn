@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://8bushmflq5w8"]
+
+[ext_resource type="Script" uid="uid://uddxj5ypxixe" path="res://botao.gd" id="1_ig7tw"]
+
+[node name="main" type="Node2D"]
+
+[node name="botao" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "clique"
+script = ExtResource("1_ig7tw")
+
+[connection signal="pressed" from="botao" to="botao" method="_on_button_pressed"]
