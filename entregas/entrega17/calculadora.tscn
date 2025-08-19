@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://28orp35m7vmy"]
+
+[ext_resource type="Script" uid="uid://bquthus8e2sf1" path="res://calculadora.gd" id="1_5y10g"]
+
+[node name="calculadora" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5y10g")
+
+[node name="numero1" type="TextEdit" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "insira um número"
+
+[node name="numero2" type="TextEdit" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "insira um número"
+
+[node name="operacao" type="OptionButton" parent="."]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 20.0
+item_count = 4
+popup/item_0/text = "+"
+popup/item_0/id = 0
+popup/item_1/text = "-"
+popup/item_1/id = 1
+popup/item_2/text = "*"
+popup/item_2/id = 2
+popup/item_3/text = "/"
+popup/item_3/id = 3
+
+[node name="calculobotao" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "calcular"
+
+[node name="resultado" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
