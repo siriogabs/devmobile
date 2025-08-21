@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://uddxj5ypxixe" path="res://botao.gd" id="1_ig7tw"]
 
-[node name="main" type="Node2D"]
+[node name="botao" type="Node2D"]
 
 [node name="botao" type="Button" parent="."]
 offset_right = 8.0

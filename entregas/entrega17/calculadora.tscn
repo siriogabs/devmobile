@@ -22,9 +22,14 @@ offset_bottom = 8.0
 text = "insira um número"
 
 [node name="operacao" type="OptionButton" parent="."]
-layout_mode = 0
-offset_right = 32.0
-offset_bottom = 20.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.425
+anchor_bottom = 0.5
+offset_left = 210.0
+offset_top = 75.0
+offset_right = 195.0
+offset_bottom = 86.0
 item_count = 4
 popup/item_0/text = "+"
 popup/item_0/id = 0
@@ -37,11 +42,15 @@ popup/item_3/id = 3
 
 [node name="calculobotao" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 82.0
+offset_top = 71.0
+offset_right = 151.0
+offset_bottom = 102.0
 text = "calcular"
 
 [node name="resultado" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 83.0
+offset_top = 53.0
+offset_right = 123.0
+offset_bottom = 76.0
