@@ -13,7 +13,13 @@ func _ready():
 	circularprogress.value = current_xp
 	levellabel.text = "Nível: " + str(level)
 
-
-
 func _on_timer_timeout() -> void:
-	pass # Replace with function body.
+	current_xp += 1
+	if current_xp >= max_xp:
+		current_xp -= max_xp
+		level += 1
+		max_xp *= 1.1
+		circularprogress.max_value = max_xp
+		circularprogress.value = current_xp
+		levellabel.text = "Nível: " + str(level)
+	pass
