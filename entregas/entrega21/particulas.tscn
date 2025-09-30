@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3wfpfkqtbvsc"]
+
+[ext_resource type="Script" uid="uid://bpvulybg524wd" path="res://entrega21/particulas.gd" id="1_08j40"]
+
+[node name="particulas" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_08j40")
+
+[node name="circularprogress" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="levellabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="LevelUpParticles" type="CPUParticles2D" parent="."]
+color = Color(1, 0.767278, 0.985936, 1)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
