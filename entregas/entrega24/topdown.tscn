@@ -145,4 +145,4 @@ script = ExtResource("1_bqlnp")
 position = Vector2(545, 319)
 scale = Vector2(6.99603, 6.48771)
 sprite_frames = SubResource("SpriteFrames_mtmx2")
-animation = &"up"
+animation = &"right"

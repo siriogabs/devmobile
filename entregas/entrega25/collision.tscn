@@ -1,0 +1,148 @@
+[gd_scene load_steps=20 format=3 uid="uid://clrq4onqncnwu"]
+
+[ext_resource type="Script" uid="uid://hww83xk00ejo" path="res://entrega25/collision.gd" id="1_jp0nk"]
+[ext_resource type="Texture2D" uid="uid://bq87ys4byjgll" path="res://spritesheet_topdown/spritesheet_topdown.png" id="2_3hx5u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qels"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(0, 366, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7utk"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(63, 366, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xu7ny"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(126, 366, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hah6"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(189, 366, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4rlc"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(0, 488, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf76c"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(63, 488, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trrxe"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(126, 488, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u42kg"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(189, 488, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haxyh"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(0, 549, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cao70"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(63, 549, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqaao"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(126, 549, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkn0i"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(189, 549, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_guesu"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(0, 427, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqme3"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(63, 427, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyk38"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(126, 427, 63, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miov8"]
+atlas = ExtResource("2_3hx5u")
+region = Rect2(189, 427, 63, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i4lxt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qels")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7utk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xu7ny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hah6")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4rlc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tf76c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trrxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u42kg")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haxyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cao70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqaao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkn0i")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_guesu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqme3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyk38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miov8")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[node name="collision" type="CharacterBody2D"]
+script = ExtResource("1_jp0nk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_i4lxt")
+animation = &"right"
